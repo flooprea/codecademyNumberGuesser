@@ -14,14 +14,16 @@ const compareGuesses = (userGuess, computerGuess, target) =>{
     console.log('comp:' +computerGuess);
     console.log('target:' +target);
  
-    if(userGuess === computerGuess){
+   /* if(userGuess === computerGuess){
         console.log('equals');
         return true;
     }
-   if(Math.abs(target - computerGuess) > Math.abs(target - userGuess)){
-        console.log('comp');
+    */
+   if((Math.abs(target - computerGuess) > Math.abs(target - userGuess)) || (userGuess === computerGuess)){
+        console.log('usr win');
         return true;
     } else{
+        console.log('comp wins');
         return false;
     }
 }
